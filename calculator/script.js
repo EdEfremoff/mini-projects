@@ -3,8 +3,8 @@ const numberButtons = document.querySelectorAll('[data-number]'),
   operationButtons = document.querySelectorAll('[data-operation]'),
   equalsButton = document.querySelector('[data-equals]'),
   deleteButton = document.querySelector('[data-delete]'),
-  paranthesesLeftButton = document.querySelector('[data-parantheses-left]'),
-  paranthesesRightButton = document.querySelector('[data-parantheses-right]'),
+  sqrtButton = document.querySelector('[data-sqrt]'),
+  percentButton = document.querySelector('[data-percent]'),
   allClearButton = document.querySelector('[data-all-clear]'),
   previousOperandTextElement = document.querySelector(
     '[data-previous-operand]'
@@ -43,6 +43,11 @@ class Calculator {
     this.currentOperand = '';
   }
 
+  getSqrt(number) {
+    let sqrtValue = Math.sqrt(this.currentOperand);
+    console.log(sqrtValue);
+  }
+
   compute() {
     let computation;
     const prev = parseFloat(this.previousOperand);
@@ -62,6 +67,9 @@ class Calculator {
         break;
       case '÷':
         computation = prev / current;
+        break;
+      case '√':
+        computation = Math.sqrt(prev);
         break;
       default:
         return;
@@ -139,4 +147,8 @@ allClearButton.addEventListener('click', button => {
 deleteButton.addEventListener('click', button => {
   calculator.delete();
   calculator.updateDisplay();
+});
+
+sqrtButton.addEventListener('click', button => {
+  calculator.getSqrt();
 });
