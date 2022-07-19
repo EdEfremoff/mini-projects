@@ -4,6 +4,7 @@ const numberButtons = document.querySelectorAll('[data-number]'),
   equalsButton = document.querySelector('[data-equals]'),
   deleteButton = document.querySelector('[data-delete]'),
   paranthesesLeftButton = document.querySelector('[data-parantheses-left]'),
+  paranthesesRightButton = document.querySelector('[data-parantheses-right]'),
   allClearButton = document.querySelector('[data-all-clear]'),
   previousOperandTextElement = document.querySelector(
     '[data-previous-operand]'
