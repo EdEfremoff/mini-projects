@@ -43,11 +43,6 @@ class Calculator {
     this.currentOperand = '';
   }
 
-  getSqrt(number) {
-    let sqrtValue = Math.sqrt(this.currentOperand);
-    console.log(sqrtValue);
-  }
-
   compute() {
     let computation;
     const prev = parseFloat(this.previousOperand);
@@ -67,9 +62,6 @@ class Calculator {
         break;
       case '÷':
         computation = prev / current;
-        break;
-      case '√':
-        computation = Math.sqrt(prev);
         break;
       default:
         return;
@@ -147,8 +139,4 @@ allClearButton.addEventListener('click', button => {
 deleteButton.addEventListener('click', button => {
   calculator.delete();
   calculator.updateDisplay();
-});
-
-sqrtButton.addEventListener('click', button => {
-  calculator.getSqrt();
 });
