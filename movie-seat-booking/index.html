@@ -1,97 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="style.css" />
-<script src="script.js" defer></script>
-<title>Бронирование мест</title>
-</head>
-<body>
-<div class="movie-container">
-  <label>Выбирете фильм:</label>
-  <select id="movie">
-    <option value="100">Фильм #1 (100 руб)</option>
-    <option value="200">Фильм #2 (200 руб)</option>
-    <option value="300">Фильм #3 (300 руб)</option>
-    <option value="400">Фильм #4 (400 руб)</option>
-  </select>
-</div>
-<ul class="showcase">
-  <li>
-    <div class="seat"></div>
-    <small>Свободно</small> </li>
-  <li>
-    <div class="seat selected"></div>
-    <small>Выбрано</small> </li>
-  <li>
-    <div class="seat occupied"></div>
-    <small>Занято</small> </li>
-</ul>
-<div class="container">
-  <div class="screen"></div>
-  <div class="row">
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-  </div>
-  <div class="row">
-    <div class="seat"></div>
-    <div class="seat occupied"></div>
-    <div class="seat"></div>
-    <div class="seat occupied"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat occupied"></div>
-    <div class="seat"></div>
-  </div>
-  <div class="row">
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat occupied"></div>
-    <div class="seat occupied"></div>
-  </div>
-  <div class="row">
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-  </div>
-  <div class="row">
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat occupied"></div>
-    <div class="seat occupied"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-  </div>
-  <div class="row">
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat"></div>
-    <div class="seat occupied"></div>
-    <div class="seat occupied"></div>
-    <div class="seat occupied"></div>
-    <div class="seat"></div>
-  </div>
-</div>
-<p class="text">Выбрано <span id="count">0</span> места, общая стоимость <span id="total">0</span> рублей</p>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<title>Бронирование мест</title>
+	</head>
+	<body>
+		<div class="movie-container">
+			<label>Выбирете фильм:</label>
+			<select id="movie">
+				<option value="100">Фильм #1 (100 руб)</option>
+				<option value="200">Фильм #2 (200 руб)</option>
+				<option value="300">Фильм #3 (300 руб)</option>
+				<option value="400">Фильм #4 (400 руб)</option>
+			</select>
+		</div>
+		<ul class="showcase">
+			<li>
+				<div class="seat"></div>
+				<small>Свободно</small>
+			</li>
+			<li>
+				<div class="seat selected"></div>
+				<small>Выбрано</small>
+			</li>
+			<li>
+				<div class="seat occupied"></div>
+				<small>Занято</small>
+			</li>
+		</ul>
+		<div class="container">
+			<div class="screen"></div>
+			<div class="row">
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+			</div>
+			<div class="row">
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+			</div>
+			<div class="row">
+				<div class="seat"></div>
+				<div class="seat occupied"></div>
+				<div class="seat occupied"></div>
+				<div class="seat occupied"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+			</div>
+			<div class="row">
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat occupied"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+			</div>
+			<div class="row">
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+			</div>
+			<div class="row">
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+				<div class="seat"></div>
+			</div>
+		</div>
+		<p class="text">
+			Выбрано <span id="count">0</span> места, общая стоимость
+			<span id="total">0</span> рублей
+		</p>
+	</body>
 </html>
